@@ -1,0 +1,4 @@
+.contacts {
+  overflow-y: scroll;
+  height: calc(100vh - var(--chat-room-user-box-height));
+}
