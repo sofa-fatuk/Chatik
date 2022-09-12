@@ -1,23 +1,21 @@
 import React from 'react'
+import { User } from '../../types'
 
-import classes from './style.module.css'
+import classes from './style.module.scss'
 
 interface Iprops {
-  avatarUrl: string,
-  name: string,
-  state: string
+  user: User,
 }
 
 function UserContact (props: Iprops) {
-  const { avatarUrl, name, state } = props
+  const { user } = props
 
   return (
     <div className={classes.contact}>
-      {/* <img className={classes.avatar__img} src="../../assets/Ellipse_1.png" /> */}
-      <img className={classes.avatar} src={avatarUrl} />
+      <img className={classes.avatar} src={user.avatarUrl} />
       <div className={classes.info}>
-        <span className={classes.name}>{name}</span>
-        <span className={classes.state}>{state}</span>
+        <span className={classes.name}>{user.name}</span>
+        {/* <span className={classes.date}>{user.date}</span> */}
       </div>
     </div>
   )

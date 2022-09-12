@@ -1,36 +1,23 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html {
-  height: 100%;
-  --chat-room-user-box-height: 62px;
-}
-
 .mainPage {
   display: flex;
 }
 
-.contacts > * {
-  margin-top: 20px;
-}
-
-.contacts {
+.contactsBox {
   position: fixed;
   width: 30%;
   border-right: 1px solid #EEEEEE;
 }
 
-.contacts__title {
+.title {
   padding-bottom: 15px;
   font-style: normal;
   font-weight: 700;
   font-size: 23px;
 }
 
-.contacts__search {
-  padding: 0 10px;
+.search {
+  height: 15vh;
+  padding: 20px 10px 0px;
 }
 
 .chatRoom {
@@ -39,12 +26,12 @@ html {
   width: 70%;
 }
 
-.chatRoom__user {
+.user {
   border-bottom: 1px solid #EEEEEE;
   height: var(--chat-room-user-box-height);
 }
 
-.chatRoom__chat {
+.chat {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -52,5 +39,3 @@ html {
   height: calc(100vh - var(--chat-room-user-box-height));
   overflow-y: scroll;
 }
-
-
