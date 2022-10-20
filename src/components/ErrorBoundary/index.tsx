@@ -15,6 +15,7 @@ type State = {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+    // вызывает конструктор родителя с этими пропсами
     super(props);
     this.state = { hasError: false };
   }

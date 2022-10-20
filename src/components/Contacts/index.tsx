@@ -77,6 +77,7 @@ function Contacts(props: IProps) {
             <div key={user.id} className={classes.contact}>
               <UserContact
                 user={user}
+                date='16:45'
               />
             </div>
           )

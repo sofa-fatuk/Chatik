@@ -2,3 +2,12 @@
   overflow-y: scroll;
   height: 85vh;
 }
+
+.contact {
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background-color: #EEEEEE;
+  }
+}

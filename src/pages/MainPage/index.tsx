@@ -7,14 +7,16 @@ import myImage from '../../assets/kate.svg'
 import classes from './style.module.scss'
 import Contacts from '../../components/Contacts'
 import { User } from '../../types'
+import Modal from '../../components/Modal'
 
 function MainPage() {
   const [search, setChangeSearch] = useState('')
+  const [open, setOpen] = useState(false)
 
   const onChangeSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const { target: { value = '' } } = event
     setChangeSearch(value)
-    
+
   }
 
   return (
@@ -33,19 +35,25 @@ function MainPage() {
           </div>
         </div>
         <div className={classes.contacts}>
-          <Contacts 
+          <Contacts
             search={search}
           />
         </div>
       </div>
       <div className={classes.chatRoom}>
         <div className={classes.user}>
+          {/* <Modal
+            open={open}
+            onClose={() => setOpen(false)}
+          >
+            Hello
+          </Modal> */}
           <UserContact
             user={{
               avatarUrl: myImage,
               name: 'Kate Rose',
             } as User}
-            // state='online'
+          // state='online'
           />
         </div>
         <div className={classes.chat}>
@@ -60,7 +68,7 @@ function MainPage() {
           ))}
         </div>
         <div className={classes.textarea}>
-          
+
         </div>
       </div>
     </div>

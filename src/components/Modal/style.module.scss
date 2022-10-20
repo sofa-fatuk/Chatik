@@ -1,0 +1,32 @@
+.hidden {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1000;
+}
+
+.window {
+  position: fixed;
+  height: 550px;
+  width: 416px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  z-index: 1000;
+}
+
+.closed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.65);;
+
+}

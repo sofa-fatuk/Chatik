@@ -4,7 +4,8 @@ import {
 import store from '../store';
 import { 
   concatUsers,
-  setUsers
+  setUsers,
+  getInfoUser,
 } from '../store/actions';
 
 type GetContactsResult = {
@@ -22,7 +23,6 @@ export const getUsers = async (search: string, page: number, reset = false): Pro
     });
     const users = await response.json();
     // console.log('response', response);
-    
 
     if (reset) {
       store.dispatch(setUsers(users))
@@ -39,4 +39,22 @@ export const getUsers = async (search: string, page: number, reset = false): Pro
       hasMore: false,
     }
   }
+}
+
+export const getIdUser = async (id: string) => {
+  try {
+    const response = await fetch(`${USERS_API}/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    // console.log('INFO', response);
+
+    store.dispatch(getInfoUser(id))
+
+  } catch (error) {
+    console.error(error);
+    return []
+  } 
 }

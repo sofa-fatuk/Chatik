@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.0"
+  },
+  "scripts": {
+    "start": "json-server --watch db.json --port 3004",
+    "generate": "node index.js > db.json"
+  },
+  "type": "module"
+}
+
